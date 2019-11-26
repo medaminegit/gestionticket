@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fr.amaris</groupId>
+    <artifactId>gestionticket</artifactId>
+    <version>${amaris.fr.version}</version>
+    <packaging>pom</packaging>
+    <name>gestionticket</name>
+    <description>Add project description here</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <amaris.fr.version>1.0-SNAPSHOT</amaris.fr.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	<modules>  <module>ticket-consumer</module>
+    <module>ticket-service</module>
+    <module>ticket-batch</module>
+    <module>ticket-model</module>
+    <module>ticket-webapp</module>
+  </modules>
+  <dependencyManagement>
+	  <dependencies>
+	  	<dependency>
+	  		<groupId>fr.amaris</groupId>
+	  		<artifactId>ticket-batch</artifactId>
+	  		<version>${amaris.fr.version}</version>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>fr.amaris</groupId>
+	  		<artifactId>ticket-service</artifactId>
+	  		<version>${amaris.fr.version}</version>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>fr.amaris</groupId>
+	  		<artifactId>ticket-consumer</artifactId>
+	  		<version>${amaris.fr.version}</version>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>fr.amaris</groupId>
+	  		<artifactId>ticket-model</artifactId>
+	  		<version>${amaris.fr.version}</version>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>fr.amaris</groupId>
+	  		<artifactId>ticket-webapp</artifactId>
+	  		<version>${amaris.fr.version}</version>
+	  	</dependency>
+	  </dependencies>
+	  
+  </dependencyManagement>
+</project>
